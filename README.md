@@ -1,11 +1,12 @@
 # Gerenciador de tarefas
+
 > Projeto realizado acompanhando a <a href="https://app.rocketseat.com.br/">RocketSeat</a>
 
 ## Aula 01 - Construção back-end de uma aplicação de To-Do List
 
 ### Relembrando
 
-- Jar: gera um arquivo executável (conseguimos usar o próprio java para executaer esse executavel, sem preceisar de
+- Jar: gera um arquivo executável (conseguimos usar o próprio java para executar esse executável, sem precisar de
   nenhum outro servidor)
 
 - War: mais utilizado para app web, precisa de um servidor para executa-lo
@@ -18,7 +19,7 @@
 ### Aprendizado
 
 - Spring boot tem um servidor embarcado chamado tomcat, por isso em uma aplicação que vai ser web conseguimos utilizar
-  jar
+  jar /*Postar dúvida dc sobre jar/war*/
 
 - Ao utilizar a dependencia do Spring Web ele consegue subir a aplicação e fazer as configurações iniciais necessárias
 
@@ -35,3 +36,13 @@
 
 - <p style ="color:red">Spring Boot funciona de modo recursivo, ou seja, primeiro roda o main e a partir dele vai percorrer nos pacotes e
   classes que estão na mesma camada para começar a gerenciar as classes presentes no projeto</p>
+
+## Aula 02 - Integração com Banco de Dados
+
+### Relembrando
+
+- @CreationTimestamp: ao colocar esta anotação em um atributo de uma entidade no momento da instanciação vai ser pego a
+  data e hora da criação e vai ser pesistido no BD
+
+- @Column(unique = true): torna o valor passado no atributo como único, ou seja, não tem como inserir o mesmo valor para
+  o atributo

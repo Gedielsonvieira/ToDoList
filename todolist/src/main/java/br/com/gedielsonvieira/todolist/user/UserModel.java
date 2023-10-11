@@ -1,28 +1,29 @@
 package br.com.gedielsonvieira.todolist.user;
 
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+@Setter
+@Getter
+@ToString
+@Entity(name = "tb_users")
 public class UserModel {
+
+   @Id
+   @GeneratedValue(strategy = GenerationType.UUID)
+   private UUID id;
+
+   @Column(unique = true)
    private String username;
    private String name;
    private String password;
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "UserModel{" +
-                "username='" + username + '\'' +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+   @CreationTimestamp
+   private LocalDateTime createdAt;
 }
