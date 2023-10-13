@@ -4,7 +4,7 @@
 
 ## Aula 01 - Construção back-end de uma aplicação de To-Do List
 
-### Relembrando
+### Relembrado
 
 - Jar: gera um arquivo executável (conseguimos usar o próprio java para executar esse executável, sem precisar de
   nenhum outro servidor)
@@ -39,10 +39,37 @@
 
 ## Aula 02 - Integração com Banco de Dados
 
-### Relembrando
+### Relembrado
 
 - @CreationTimestamp: ao colocar esta anotação em um atributo de uma entidade no momento da instanciação vai ser pego a
   data e hora da criação e vai ser pesistido no BD
 
 - @Column(unique = true): torna o valor passado no atributo como único, ou seja, não tem como inserir o mesmo valor para
   o atributo
+
+## Aula 03 - Implementando segurança nos dados do usuário
+
+### Aprendizado
+
+- Bcrypt: é uma função de hash de senha que podemos utilizar para ter uma maior segurança com a senha do usuário, ao
+  salvar a senha no banco de dados vai ser criptografada
+
+- O T que separa as horas da data existe por causa da convenção de uma ISO
+    - Ex: yyyy-mm-ddTHH:mm:ss
+
+- @Component: é a anotação de gerenciamento do spring mais genérica
+
+- servlet: é a base para qualquer framework web que temos no java, tudo o que temos de web, spring boot e outros
+  framewors tem como base o servlet
+
+- <p style="color: red">O filter do jakarta.servlet ele nos dá somente o servletRequest, servletReposne mas para uma API 
+  é melhor utilizar o OncePerRequestFilter, pois fazemos requisições HTTP e o OncePerRequestFilter nos entrega a 
+  possibilidade de tratativa de requisições HTTP</p>
+
+- <p style="color: red">Um header HTTP é uma parte da requisição ou resposta HTTP que contém informações sobre a 
+  requisição ou resposta.</p>
+
+- Basic auth: é uma das formas de autenticação, no basic auth temos o usuário e a senha para que seja autenticado.
+  - Basic auth é codificada usando base64.
+
+## Aula 04 - Atualizando tarefas e validação de rotas
