@@ -72,4 +72,4 @@
 - Basic auth: é uma das formas de autenticação, no basic auth temos o usuário e a senha para que seja autenticado.
   - Basic auth é codificada usando base64.
 
-## Aula 04 - Atualizando tarefas e validação de rotas
+- Com o método setAttribute conseguimos enviar informações do filtro do servlet para o controlador

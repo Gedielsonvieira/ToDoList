@@ -24,9 +24,6 @@ public class TaskModel {
     private LocalDateTime endAt;
     private String priority;
 
-    //problemas de passar o id do usuario ao cadastrar uma tarefa:
-    //cadastrar uma tarefa para um usuario que não existe
-    //cadastrar uma tarefa para um usuario que não tem permissão
     private UUID idUser;
 
     @CreationTimestamp
