@@ -70,6 +70,13 @@
   requisição ou resposta.</p>
 
 - Basic auth: é uma das formas de autenticação, no basic auth temos o usuário e a senha para que seja autenticado.
-  - Basic auth é codificada usando base64.
+    - Basic auth é codificada usando base64.
 
 - Com o método setAttribute conseguimos enviar informações do filtro do servlet para o controlador
+
+## Aula 05 - Deploy do Back-End
+
+### Relembrado
+
+- Ao lançar uma exception podemos tratá-la ou lançar a responsabilidade pra quem etiver chamando o método que contém a
+  exception
