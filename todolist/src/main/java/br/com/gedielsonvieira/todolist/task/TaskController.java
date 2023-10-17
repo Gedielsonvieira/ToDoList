@@ -51,8 +51,16 @@ public class TaskController {
         Optional<TaskModel> task = taskRepository.findById(id);
 
         if (task.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("tarefa " + id + "inexistente");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("tarefa " + id + "não encontrada");
         } else {
+
+            Object idUser = httpServletRequest.getAttribute("idUser");
+
+            if(!task.get().getIdUser().equals(idUser)){
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                        .body("Usuário não tem permissão para alterar esta tarefa");
+            }
+            //Atualiza quem é dono da tarefa
             Utils.copyNonNullProperties(taskModel, task.get());
             return ResponseEntity.ok(taskRepository.save(task.get()));
         }
