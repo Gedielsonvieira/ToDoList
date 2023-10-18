@@ -19,7 +19,7 @@
 ### Aprendizado
 
 - Spring boot tem um servidor embarcado chamado tomcat, por isso em uma aplicação que vai ser web conseguimos utilizar
-  jar /*Postar dúvida dc sobre jar/war*/
+  jar
 
 - Ao utilizar a dependencia do Spring Web ele consegue subir a aplicação e fazer as configurações iniciais necessárias
 
